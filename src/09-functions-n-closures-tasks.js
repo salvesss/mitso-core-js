@@ -123,7 +123,7 @@ function retry(func, attempts) {
         result = func();
         break;
       } catch (e) {
-        currentAttempt += 1; // Заменили ++ на более явное увеличение
+        currentAttempt += 1; 
       }
     }
     return result;
@@ -202,9 +202,9 @@ function partialUsingArguments(fn, ...args1) {
 function getIdGeneratorFunction(startFrom) {
   let id = startFrom - 1;
   return function idGenerator() {
-    id += 1; // Используем += вместо явного присваивания
+    id += 1; 
     return id;
-  };
+  }; 
 }
 
 module.exports = {
