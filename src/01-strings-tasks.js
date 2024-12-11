@@ -18,7 +18,7 @@
  *   '',  'bb'  => 'bb'
  */
 function concatenateStrings(value1, value2) {
-	return value1 + value2;
+  return value1 + value2;
 }
 
 /**
@@ -33,7 +33,7 @@ function concatenateStrings(value1, value2) {
  *   ''      => 0
  */
 function getStringLength(value) {
-	return value.length;
+  return value.length;
 }
 
 /**
@@ -50,7 +50,7 @@ function getStringLength(value) {
  *   'Chuck','Norris'  => 'Hello, Chuck Norris!'
  */
 function getStringFromTemplate(firstName, lastName) {
-	return `Hello, ${firstName} ${lastName}!`;
+  return `Hello, ${firstName} ${lastName}!`;
 }
 
 /**
@@ -64,7 +64,7 @@ function getStringFromTemplate(firstName, lastName) {
  *   'Hello, Chuck Norris!' => 'Chuck Norris'
  */
 function extractNameFromTemplate(value) {
-	return value.replace('Hello, ', '').replace('!', '');
+  return value.replace('Hello, ', '').replace('!', '');
 }
 
 /**
@@ -78,7 +78,7 @@ function extractNameFromTemplate(value) {
  *   'cat'       => 'c'
  */
 function getFirstChar(value) {
-	return value[0];
+  return value[0];
 }
 
 /**
@@ -93,7 +93,7 @@ function getFirstChar(value) {
  *   '\tHello, World! ' => 'Hello, World!'
  */
 function removeLeadingAndTrailingWhitespaces(value) {
-	return value.trim();
+  return value.trim();
 }
 
 /**
@@ -109,7 +109,7 @@ function removeLeadingAndTrailingWhitespaces(value) {
  */
 
 function repeatString(value, count) {
-	return value.repeat(count);
+  return value.repeat(count);
 }
 
 /**
@@ -126,7 +126,7 @@ function repeatString(value, count) {
  */
 
 function removeFirstOccurrences(str, value) {
-	return str.replace(value, '');
+  return str.replace(value, '');
 }
 
 /**
@@ -142,7 +142,7 @@ function removeFirstOccurrences(str, value) {
  */
 
 function unbracketTag(str) {
-	return str.slice(1, -1);
+  return str.slice(1, -1);
 }
 
 /**
@@ -157,7 +157,7 @@ function unbracketTag(str) {
  */
 
 function convertToUpperCase(str) {
-	return str.toUpperCase();
+  return str.toUpperCase();
 }
 
 /**
@@ -177,7 +177,7 @@ function convertToUpperCase(str) {
  */
 
 function extractEmails(str) {
-	return str.split(';');
+  return str.split(';');
 }
 
 /**
@@ -205,12 +205,12 @@ function extractEmails(str) {
  */
 
 function getRectangleString(width, height) {
-	const top = `┌${'─'.repeat(width - 2)}┐\n`;
-	const middle = `${Array(height - 2)
-		.fill(`│${' '.repeat(width - 2)}│\n`)
-		.join('')}`;
-	const bottom = `└${'─'.repeat(width - 2)}┘\n`;
-	return `${top}${middle}${bottom}`;
+  const top = `┌${'─'.repeat(width - 2)}┐\n`;
+  const middle = `${Array(height - 2)
+    .fill(`│${' '.repeat(width - 2)}│\n`)
+    .join('')}`;
+  const bottom = `└${'─'.repeat(width - 2)}┘\n`;
+  return `${top}${middle}${bottom}`;
 }
 
 /**
@@ -231,11 +231,11 @@ function getRectangleString(width, height) {
  */
 
 function encodeToRot13(str) {
-	return str.replace(/[A-Za-z]/g, (char) => (
-		String.fromCharCode(
-			char.charCodeAt(0) + (char.toLowerCase() < 'n' ? 13 : -13),
-		)
-	));
+  return str.replace(/[A-Za-z]/g, (char) => (
+    String.fromCharCode(
+      char.charCodeAt(0) + (char.toLowerCase() < 'n' ? 13 : -13),
+    )
+  ));
 }
 
 /**
@@ -253,7 +253,7 @@ function encodeToRot13(str) {
  */
 
 function isString(value) {
-	return typeof value === 'string' || value instanceof String;
+  return typeof value === 'string' || value instanceof String;
 }
 
 /**
@@ -282,27 +282,27 @@ function isString(value) {
  */
 
 function getCardId(value) {
-	const suits = ['♣', '♦', '♥', '♠'];
-	const ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
-	const suit = value.slice(-1);
-	const rank = value.slice(0, -1);
-	return ranks.indexOf(rank) + suits.indexOf(suit) * 13;
+  const suits = ['♣', '♦', '♥', '♠'];
+  const ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+  const suit = value.slice(-1);
+  const rank = value.slice(0, -1);
+  return ranks.indexOf(rank) + suits.indexOf(suit) * 13;
 }
 
 module.exports = {
-	concatenateStrings,
-	getStringLength,
-	getStringFromTemplate,
-	extractNameFromTemplate,
-	getFirstChar,
-	removeLeadingAndTrailingWhitespaces,
-	repeatString,
-	removeFirstOccurrences,
-	unbracketTag,
-	convertToUpperCase,
-	extractEmails,
-	getRectangleString,
-	encodeToRot13,
-	isString,
-	getCardId,
+  concatenateStrings,
+  getStringLength,
+  getStringFromTemplate,
+  extractNameFromTemplate,
+  getFirstChar,
+  removeLeadingAndTrailingWhitespaces,
+  repeatString,
+  removeFirstOccurrences,
+  unbracketTag,
+  convertToUpperCase,
+  extractEmails,
+  getRectangleString,
+  encodeToRot13,
+  isString,
+  getCardId,
 };

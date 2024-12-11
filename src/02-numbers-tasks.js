@@ -19,7 +19,7 @@
  *   5, 5  => 25
  */
 function getRectangleArea(width, height) {
-	return width * height;
+  return width * height;
 }
 
 /**
@@ -34,7 +34,7 @@ function getRectangleArea(width, height) {
  *   0    => 0
  */
 function getCircleCircumference(radius) {
-	return 2 * Math.PI * radius;
+  return 2 * Math.PI * radius;
 }
 
 /**
@@ -50,7 +50,7 @@ function getCircleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-	return (value1 + value2) / 2;
+  return (value1 + value2) / 2;
 }
 
 /**
@@ -69,7 +69,7 @@ function getAverage(value1, value2) {
  *   (-5,0) (10,-10) => 18.027756377319946
  */
 function getDistanceBetweenPoints(x1, y1, x2, y2) {
-	return Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+  return Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
 }
 
 /**
@@ -85,7 +85,7 @@ function getDistanceBetweenPoints(x1, y1, x2, y2) {
  *   5*x = 0         => 0
  */
 function getLinearEquationRoot(a, b) {
-	return -b / a;
+  return -b / a;
 }
 
 /**
@@ -107,10 +107,10 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (1,2)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-	const dotProduct = x1 * x2 + y1 * y2;
-	const magnitude1 = Math.sqrt(x1 ** 2 + y1 ** 2);
-	const magnitude2 = Math.sqrt(x2 ** 2 + y2 ** 2);
-	return Math.acos(dotProduct / (magnitude1 * magnitude2));
+  const dotProduct = x1 * x2 + y1 * y2;
+  const magnitude1 = Math.sqrt(x1 ** 2 + y1 ** 2);
+  const magnitude2 = Math.sqrt(x2 ** 2 + y2 ** 2);
+  return Math.acos(dotProduct / (magnitude1 * magnitude2));
 }
 
 /**
@@ -126,7 +126,7 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
  *     0     => 0
  */
 function getLastDigit(value) {
-	value % 10;
+  return value % 10;
 }
 
 /**
@@ -141,7 +141,7 @@ function getLastDigit(value) {
  * '-525.5'     => -525.5
  */
 function parseNumberFromString(value) {
-	return parseFloat(value);
+  return parseFloat(value);
 }
 
 /**
@@ -158,7 +158,7 @@ function parseNumberFromString(value) {
  *   1,2,3   => 3.741657386773941
  */
 function getParallelepipedDiagonal(a, b, c) {
-	return Math.sqrt(a ** 2 + b ** 2 + c ** 2);
+  return Math.sqrt(a ** 2 + b ** 2 + c ** 2);
 }
 
 /**
@@ -179,8 +179,8 @@ function getParallelepipedDiagonal(a, b, c) {
  *   1678, 3  => 2000
  */
 function roundToPowerOfTen(num, pow) {
-	const factor = 10 ** pow;
-	return Math.round(num / factor) * factor;
+  const factor = 10 ** pow;
+  return Math.round(num / factor) * factor;
 }
 
 /**
@@ -201,13 +201,13 @@ function roundToPowerOfTen(num, pow) {
  *   17 => true
  */
 function isPrime(n) {
-	if (n <= 1) return false;
-	if (n <= 3) return true;
-	if (n % 2 === 0 || n % 3 === 0) return false;
-	for (let i = 5; i * i <= n; i += 6) {
-		if (n % i === 0 || n % (i + 2) === 0) return false;
-	}
-	return true;
+  if (n <= 1) return false;
+  if (n <= 3) return true;
+  if (n % 2 === 0 || n % 3 === 0) return false;
+  for (let i = 5; i * i <= n; i += 6) {
+    if (n % i === 0 || n % (i + 2) === 0) return false;
+  }
+  return true;
 }
 
 /**
@@ -226,21 +226,21 @@ function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(value, def) {
-	const num = Number(value);
-	return Number.isNaN(num) ? def : num;
+  const num = Number(value);
+  return Number.isNaN(num) ? def : num;
 }
 
 module.exports = {
-	getRectangleArea,
-	getCircleCircumference,
-	getAverage,
-	getDistanceBetweenPoints,
-	getLinearEquationRoot,
-	getAngleBetweenVectors,
-	getLastDigit,
-	parseNumberFromString,
-	getParallelepipedDiagonal,
-	roundToPowerOfTen,
-	isPrime,
-	toNumber,
+  getRectangleArea,
+  getCircleCircumference,
+  getAverage,
+  getDistanceBetweenPoints,
+  getLinearEquationRoot,
+  getAngleBetweenVectors,
+  getLastDigit,
+  parseNumberFromString,
+  getParallelepipedDiagonal,
+  roundToPowerOfTen,
+  isPrime,
+  toNumber,
 };
